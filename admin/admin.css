@@ -1,0 +1,59 @@
+/* PIT Finds staff portal. Loads after ../style.css and reuses its colour variables. */
+body.admin{background:radial-gradient(900px 400px at 85% -10%,rgba(42,157,143,.14),transparent),radial-gradient(700px 360px at 0% 0%,rgba(252,191,73,.12),transparent),var(--bg);background-attachment:fixed}
+body.admin header{border-bottom:3px solid var(--acc);box-shadow:0 4px 18px rgba(0,0,0,.12)}
+body.admin .pill{background:var(--acc);color:#14213d;border-radius:99px;font:700 .68rem "Instrument Sans",sans-serif;letter-spacing:.08em;padding:.18rem .6rem;margin-left:.3rem}
+body.admin nav a{text-decoration:none}
+body.admin main{max-width:1150px}
+
+/* stats */
+body.admin .stats{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem}
+body.admin .stat{border-left:4px solid var(--teal);box-shadow:0 2px 10px rgba(0,0,0,.08)}
+body.admin .stat.hot{border-left-color:var(--coral)}
+body.admin .stat.hot b{color:var(--coral)}
+
+/* main tabs + status chips */
+body.admin .tabs{display:flex;gap:.3rem;overflow-x:auto;margin-bottom:1rem;padding:.35rem;background:var(--card);border:1px solid var(--line);border-radius:99px;width:fit-content;max-width:100%}
+body.admin .tabs a{padding:.5rem 1.1rem;border-radius:99px;border:0;color:var(--ink);background:transparent;text-decoration:none;font-weight:600;font-size:.95rem;white-space:nowrap;transition:background .2s,transform .15s}
+body.admin .tabs a:hover{background:var(--bg)}
+body.admin .tabs a.on{background:var(--acc);color:#14213d;box-shadow:0 2px 8px rgba(252,191,73,.4)}
+body.admin .tabs a:visited{color:var(--ink)}body.admin .tabs a.on:visited{color:#14213d}
+body.admin .tabs i{font-style:normal;background:var(--coral);color:#fff;border-radius:99px;padding:.02rem .5rem;margin-left:.4rem;font-size:.75rem}
+body.admin .tabs.sub{background:transparent;border:0;padding:0;border-radius:0;gap:.45rem}
+body.admin .tabs.sub a{border:1px solid var(--line);background:var(--card);padding:.3rem .9rem;font-size:.85rem}
+body.admin .tabs.sub a.on{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:none}
+body.admin .tabs.sub a.on:visited{color:var(--bg)}
+.hint{color:var(--mut);margin:-.3rem 0 1rem;font-size:.95rem}
+
+/* tables */
+body.admin .panel.w{padding:0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+body.admin .scroll{overflow-x:auto}
+body.admin .tbl th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);background:var(--bg);padding:.8rem 1rem;position:sticky;top:0}
+body.admin .tbl td{padding:.9rem 1rem}
+body.admin .tbl tr:last-child td{border-bottom:0}
+body.admin .tbl tr:hover td{background:rgba(252,191,73,.07)}
+body.admin .tbl td small{color:var(--mut);line-height:1.5}
+
+/* cards, forms inside cards */
+body.admin .card{transition:transform .2s,box-shadow .2s}
+body.admin .card:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.16)}
+.afrm{display:flex;gap:.4rem;flex-wrap:wrap;width:100%;align-items:center}
+.afrm input{flex:1 1 140px;width:auto;padding:.4rem .65rem;font-size:.88rem}
+.note{display:block;width:100%;background:var(--bg);border-left:3px solid var(--acc);padding:.4rem .65rem;border-radius:6px;font-size:.88rem;margin-top:.3rem}
+.badge.approved{background:var(--teal);color:#fff}
+
+/* forms (admins tab) */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem;align-items:start}
+.two .panel{max-width:none;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+body.admin .panel h3{margin-bottom:.2rem;font-size:1.2rem}
+
+/* login page */
+body.admin .panel.login{margin:1.2rem auto;max-width:420px;padding:1.8rem;border-top:4px solid var(--acc);box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.login .lk{font-size:2.4rem;text-align:center;margin-bottom:.2rem}
+.login .btn.a{flex:1;text-align:center}
+
+/* empty + footer */
+body.admin .empty{background:var(--card);padding:3rem 2rem}
+body.admin .empty:before{content:"📭";display:block;font-size:2.2rem;margin-bottom:.4rem}
+.afoot{text-align:center;color:var(--mut);font-size:.85rem;padding:0 1rem 2rem}.afoot a{color:inherit}
+
+@media(max-width:700px){body.admin .tabs{border-radius:16px}.two{grid-template-columns:1fr}}
